@@ -1,0 +1,18 @@
+#taken from 
+cmake_minimum_required(VERSION 3.2)
+ 
+project(pfunit-download LANGUAGES NONE
+    VERSION 0.0.0.0)
+
+include(ExternalProject)
+ExternalProject_Add(pfunit
+    GIT_REPOSITORY      https://git.code.sf.net/p/pfunit/code
+    GIT_TAG             master
+    SOURCE_DIR          "${PFUNIT_SRC_DIR}"
+    BINARY_DIR          "${PFUNIT_BUILD_DIR}"
+    INSTALL_DIR         "${PFUNIT_INSTALL_DIR}"
+    CONFIGURE_COMMAND   ""
+    BUILD_COMMAND       ""
+    INSTALL_COMMAND     ""
+    TEST_COMMAND        ""
+    )

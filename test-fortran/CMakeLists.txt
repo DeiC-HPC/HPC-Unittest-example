@@ -1,16 +1,3 @@
-include(ExternalProject)
-
-ExternalProject_Add(pfunit
-    GIT_REPOSITORY      https://git.code.sf.net/p/pfunit/code
-    GIT_TAG             master
-    SOURCE_DIR          "${PFUNIT_SRC_DIR}"
-    BINARY_DIR          "${PFUNIT_BUILD_DIR}"
-    INSTALL_DIR         "${PFUNIT_INSTALL_DIR}"
-    CONFIGURE_COMMAND   ""
-    BUILD_COMMAND       ""
-    INSTALL_COMMAND     ""
-    TEST_COMMAND        ""
-    )
 
 set (PFUNIT_SRC_DIR ${CMAKE_BINARY_DIR}/pfunit/src)
 set (PFUNIT_DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/pfunit/download)
