@@ -5,7 +5,7 @@ set (PFUNIT_BUILD_DIR ${CMAKE_BINARY_DIR}/pfunit/build)
 set (PFUNIT_INSTALL_DIR ${CMAKE_BINARY_DIR}/pfunit/install)
 set (pFUnit_DIR ${PFUNIT_INSTALL_DIR})
 message ("Building pFUnit")
-include (build_pfuint_from_source.cmake)
+include (build_pfunit_from_source.cmake)
 message ("Looking for pFUnit here: ${PFUNIT_INSTALL_DIR}")
 find_package ("pFUnit"
     CONFIG
@@ -18,7 +18,7 @@ add_library (sut
 target_include_directories(sut PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 # tests
 set (test_srcs test_square.pf)
-add_pfunit_ctest (my_tests
+add_pfunit_test (my_tests
   TEST_SOURCES ${test_srcs}
   LINK_LIBRARIES sut
   )
